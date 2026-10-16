@@ -1,12 +1,14 @@
 /* Stile delle pagine sede Gruppo Agila.
    Tutte le regole sono limitate a .ga-sede per non interferire con il tema WordPress.
-   Per adattare i colori al brand modificare solo le variabili qui sotto. */
+   Colori e font vengono presi dal tema del sito quando disponibili (Elementor, Astra o
+   tema a blocchi); i valori esadecimali in fondo a ogni riga valgono solo come riserva.
+   Per forzare un colore basta sostituire l'intera riga con il codice esadecimale. */
 .ga-sede {
-  --ga-primario: #0b5c8a;
-  --ga-primario-scuro: #08466a;
-  --ga-accento: #e8772e;
+  --ga-primario: var(--e-global-color-primary, var(--ast-global-color-0, var(--wp--preset--color--primary, #0b5c8a)));
+  --ga-primario-scuro: var(--e-global-color-secondary, var(--ast-global-color-1, var(--wp--preset--color--secondary, #08466a)));
+  --ga-accento: var(--e-global-color-accent, var(--wp--preset--color--accent, #e8772e));
   --ga-whatsapp: #1fa855;
-  --ga-testo: #1f2933;
+  --ga-testo: var(--e-global-color-text, var(--ast-global-color-3, var(--wp--preset--color--contrast, #1f2933)));
   --ga-testo-tenue: #52606d;
   --ga-sfondo-tenue: #f3f7fa;
   --ga-bordo: #d9e2ec;
@@ -14,6 +16,13 @@
   color: var(--ga-testo);
   font-size: 17px;
   line-height: 1.6;
+}
+/* Sfondi chiari e bordi ricavati dal colore principale del sito */
+@supports (color: color-mix(in srgb, red, blue)) {
+  .ga-sede {
+    --ga-sfondo-tenue: color-mix(in srgb, var(--ga-primario) 7%, #fff);
+    --ga-bordo: color-mix(in srgb, var(--ga-primario) 18%, #fff);
+  }
 }
 .ga-sede *, .ga-sede *::before, .ga-sede *::after { box-sizing: border-box; }
 .ga-sede h1, .ga-sede h2, .ga-sede h3 { line-height: 1.25; color: var(--ga-testo); margin: 0 0 .6em; }
