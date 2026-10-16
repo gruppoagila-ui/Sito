@@ -1,0 +1,94 @@
+{
+  "azienda": {
+    "nome": "Gruppo Agila",
+    "sito": "https://www.gruppoagila.it",
+    "percorso_sedi": "/sedi/",
+    "pagina_contatti": "https://www.gruppoagila.it/contatti/",
+    "autorizzazione": "Agenzia per il Lavoro autorizzata dal Ministero del Lavoro (aut. n. [DA COMPILARE: verificare numero, es. 0019245])",
+    "logo": "[DA COMPILARE: URL del logo, es. https://www.gruppoagila.it/wp-content/uploads/logo.png]",
+    "form_shortcode": "",
+    "punti_di_forza": [
+      "Agenzia per il Lavoro autorizzata dal Ministero del Lavoro",
+      "Personale selezionato, con colloquio e verifica delle referenze",
+      "Gestione completa di contratto, buste paga e contributi INPS",
+      "Un referente dedicato nella sede di {citta}"
+    ]
+  },
+  "sedi": [
+    {
+      "slug": "sede-1",
+      "citta": "[DA COMPILARE: Città 1]",
+      "provincia": "[DA COMPILARE: sigla provincia, es. VA]",
+      "indirizzo": "[DA COMPILARE: Via e numero civico]",
+      "cap": "[DA COMPILARE: CAP]",
+      "telefono": "[DA COMPILARE: es. +39 0331 000000]",
+      "whatsapp": "[DA COMPILARE: es. +39 333 0000000]",
+      "email": "[DA COMPILARE: es. citta1@gruppoagila.it]",
+      "referente": "[DA COMPILARE: Nome e cognome del referente, oppure lasciare vuoto]",
+      "orari": [
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "09:00", "chiude": "13:00"},
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"}
+      ],
+      "lat": "",
+      "lng": "",
+      "google_business_url": "[DA COMPILARE: link alla scheda Google Business della sede, per recensioni e indicazioni]",
+      "intro": "[DA COMPILARE: 2-3 frasi uniche su questa sede. Es: da quanti anni siete presenti in città, quante famiglie avete aiutato, cosa distingue questa sede. Testo diverso per ogni sede = migliore posizionamento su Google.]",
+      "come_raggiungerci": "[DA COMPILARE: es. a 5 minuti dalla stazione, parcheggio gratuito di fronte, fermata autobus linea X]",
+      "zone_servite": [
+        "[DA COMPILARE: Comune vicino 1]",
+        "[DA COMPILARE: Comune vicino 2]",
+        "[DA COMPILARE: Comune vicino 3]"
+      ]
+    },
+    {
+      "slug": "sede-2",
+      "citta": "[DA COMPILARE: Città 2]",
+      "provincia": "[DA COMPILARE: sigla provincia]",
+      "indirizzo": "[DA COMPILARE: Via e numero civico]",
+      "cap": "[DA COMPILARE: CAP]",
+      "telefono": "[DA COMPILARE: telefono]",
+      "whatsapp": "[DA COMPILARE: numero WhatsApp]",
+      "email": "[DA COMPILARE: email della sede]",
+      "referente": "[DA COMPILARE: Nome e cognome del referente, oppure lasciare vuoto]",
+      "orari": [
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "09:00", "chiude": "13:00"},
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"}
+      ],
+      "lat": "",
+      "lng": "",
+      "google_business_url": "[DA COMPILARE: link alla scheda Google Business della sede]",
+      "intro": "[DA COMPILARE: 2-3 frasi uniche su questa sede.]",
+      "come_raggiungerci": "[DA COMPILARE: indicazioni per raggiungere la sede]",
+      "zone_servite": [
+        "[DA COMPILARE: Comune vicino 1]",
+        "[DA COMPILARE: Comune vicino 2]",
+        "[DA COMPILARE: Comune vicino 3]"
+      ]
+    },
+    {
+      "slug": "sede-3",
+      "citta": "[DA COMPILARE: Città 3]",
+      "provincia": "[DA COMPILARE: sigla provincia]",
+      "indirizzo": "[DA COMPILARE: Via e numero civico]",
+      "cap": "[DA COMPILARE: CAP]",
+      "telefono": "[DA COMPILARE: telefono]",
+      "whatsapp": "[DA COMPILARE: numero WhatsApp]",
+      "email": "[DA COMPILARE: email della sede]",
+      "referente": "[DA COMPILARE: Nome e cognome del referente, oppure lasciare vuoto]",
+      "orari": [
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "09:00", "chiude": "13:00"},
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"}
+      ],
+      "lat": "",
+      "lng": "",
+      "google_business_url": "[DA COMPILARE: link alla scheda Google Business della sede]",
+      "intro": "[DA COMPILARE: 2-3 frasi uniche su questa sede.]",
+      "come_raggiungerci": "[DA COMPILARE: indicazioni per raggiungere la sede]",
+      "zone_servite": [
+        "[DA COMPILARE: Comune vicino 1]",
+        "[DA COMPILARE: Comune vicino 2]",
+        "[DA COMPILARE: Comune vicino 3]"
+      ]
+    }
+  ]
+}

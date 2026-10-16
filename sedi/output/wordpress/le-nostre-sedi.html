@@ -1,0 +1,124 @@
+<style>
+/* Stile delle pagine sede Gruppo Agila.
+   Tutte le regole sono limitate a .ga-sede per non interferire con il tema WordPress.
+   Per adattare i colori al brand modificare solo le variabili qui sotto. */
+.ga-sede {
+  --ga-primario: #0b5c8a;
+  --ga-primario-scuro: #08466a;
+  --ga-accento: #e8772e;
+  --ga-whatsapp: #1fa855;
+  --ga-testo: #1f2933;
+  --ga-testo-tenue: #52606d;
+  --ga-sfondo-tenue: #f3f7fa;
+  --ga-bordo: #d9e2ec;
+  --ga-raggio: 12px;
+  color: var(--ga-testo);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.ga-sede *, .ga-sede *::before, .ga-sede *::after { box-sizing: border-box; }
+.ga-sede h1, .ga-sede h2, .ga-sede h3 { line-height: 1.25; color: var(--ga-testo); margin: 0 0 .6em; }
+.ga-sede h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.ga-sede h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.ga-sede h3 { font-size: 1.15rem; }
+.ga-sede p { margin: 0 0 1em; }
+.ga-sede a { color: var(--ga-primario); }
+.ga-sede section { padding: 48px 0; }
+.ga-sede .ga-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+.ga-sede .ga-breadcrumb { font-size: .9rem; color: var(--ga-testo-tenue); padding: 16px 0 0; }
+.ga-sede .ga-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.ga-sede .ga-breadcrumb li + li::before { content: "›"; margin-right: 6px; }
+
+.ga-sede .ga-hero { background: linear-gradient(135deg, var(--ga-primario), var(--ga-primario-scuro)); color: #fff; border-radius: var(--ga-raggio); margin: 16px 0 0; padding: 48px 0; }
+.ga-sede .ga-hero h1, .ga-sede .ga-hero p { color: #fff; }
+.ga-sede .ga-hero .ga-sottotitolo { font-size: 1.15rem; opacity: .95; max-width: 720px; }
+.ga-sede .ga-cta-riga { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 8px; }
+.ga-sede .ga-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+.ga-sede .ga-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+.ga-sede .ga-btn-accento { background: var(--ga-accento); color: #fff; }
+.ga-sede .ga-btn-whatsapp { background: var(--ga-whatsapp); color: #fff; }
+.ga-sede .ga-btn-chiaro { background: #fff; color: var(--ga-primario); }
+.ga-sede .ga-btn-bordo { border: 2px solid var(--ga-primario); color: var(--ga-primario); background: transparent; }
+.ga-sede .ga-badge-lista { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .95rem; }
+.ga-sede .ga-badge-lista li::before { content: "✓ "; font-weight: 700; color: #ffd8b8; }
+
+.ga-sede .ga-griglia { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.ga-sede .ga-card { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 24px; }
+.ga-sede .ga-card .ga-icona { font-size: 2rem; line-height: 1; margin-bottom: 12px; display: block; }
+.ga-sede .ga-card p:last-child { margin-bottom: 0; }
+.ga-sede .ga-tenue { background: var(--ga-sfondo-tenue); border-radius: var(--ga-raggio); }
+
+.ga-sede .ga-passi { counter-reset: passo; list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.ga-sede .ga-passi li { counter-increment: passo; background: #fff; border-radius: var(--ga-raggio); padding: 24px; border: 1px solid var(--ga-bordo); }
+.ga-sede .ga-passi li::before { content: counter(passo); display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--ga-primario); color: #fff; font-weight: 700; margin-bottom: 12px; }
+
+.ga-sede .ga-zone { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ga-sede .ga-zone li { background: #fff; border: 1px solid var(--ga-bordo); border-radius: 999px; padding: 6px 14px; font-size: .95rem; }
+
+.ga-sede .ga-contatti { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+.ga-sede .ga-contatti dl { margin: 0; }
+.ga-sede .ga-contatti dt { font-weight: 700; margin-top: 14px; }
+.ga-sede .ga-contatti dd { margin: 2px 0 0; }
+.ga-sede .ga-orari { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.ga-sede .ga-orari td { padding: 4px 0; border-bottom: 1px solid var(--ga-bordo); }
+.ga-sede .ga-orari td:last-child { text-align: right; }
+.ga-sede .ga-mappa { width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: var(--ga-raggio); }
+
+.ga-sede .ga-faq details { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 16px 20px; margin-bottom: 12px; }
+.ga-sede .ga-faq summary { font-weight: 700; cursor: pointer; }
+.ga-sede .ga-faq details p { margin: 12px 0 0; }
+
+.ga-sede .ga-cta-finale { background: var(--ga-accento); color: #fff; border-radius: var(--ga-raggio); text-align: center; padding: 48px 16px; margin-bottom: 48px; }
+.ga-sede .ga-cta-finale h2, .ga-sede .ga-cta-finale p { color: #fff; }
+.ga-sede .ga-cta-finale .ga-cta-riga { justify-content: center; }
+.ga-sede .ga-cta-finale .ga-btn-accento { background: var(--ga-primario); }
+
+/* Barra contatti fissa su smartphone: chiamata e WhatsApp sempre a portata di pollice */
+.ga-sede .ga-barra-mobile { display: none; }
+@media (max-width: 700px) {
+  .ga-sede section { padding: 32px 0; }
+  .ga-sede .ga-hero { border-radius: 0; margin-left: -16px; margin-right: -16px; }
+  .ga-sede .ga-btn { width: 100%; justify-content: center; }
+  .ga-sede .ga-barra-mobile { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; box-shadow: 0 -4px 14px rgba(0,0,0,.15); }
+  .ga-sede .ga-barra-mobile a { padding: 14px 8px; text-align: center; font-weight: 700; color: #fff; text-decoration: none; }
+  .ga-sede .ga-barra-mobile a:first-child { background: var(--ga-primario); }
+  .ga-sede .ga-barra-mobile a:last-child { background: var(--ga-whatsapp); }
+  .ga-sede .ga-cta-finale { margin-bottom: 72px; }
+}
+</style>
+<div class="ga-sede">
+<div class="ga-wrap">
+
+<header class="ga-hero">
+  <div class="ga-wrap">
+    <h1>Le sedi Gruppo Agila</h1>
+    <p class="ga-sottotitolo">Badanti, colf e babysitter vicino a te: siamo presenti a [DA COMPILARE: Città 1], [DA COMPILARE: Città 2], [DA COMPILARE: Città 3]. Scegli la sede più comoda e contattaci per un primo colloquio senza impegno.</p>
+  </div>
+</header>
+
+<section>
+  <div class="ga-griglia">
+    <div class="ga-card">
+      <h3>Gruppo Agila [DA COMPILARE: Città 1]</h3>
+      <p>[DA COMPILARE: Via e numero civico], [DA COMPILARE: CAP] [DA COMPILARE: Città 1] ([DA COMPILARE: sigla provincia, es. VA])<br>
+      <a href="#contatti" data-evento="chiamata" data-sede="sede-1">[DA COMPILARE: es. +39 0331 000000]</a></p>
+      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/sede-1/">Scopri la sede di [DA COMPILARE: Città 1]</a></p>
+    </div>
+    <div class="ga-card">
+      <h3>Gruppo Agila [DA COMPILARE: Città 2]</h3>
+      <p>[DA COMPILARE: Via e numero civico], [DA COMPILARE: CAP] [DA COMPILARE: Città 2] ([DA COMPILARE: sigla provincia])<br>
+      <a href="#contatti" data-evento="chiamata" data-sede="sede-2">[DA COMPILARE: telefono]</a></p>
+      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/sede-2/">Scopri la sede di [DA COMPILARE: Città 2]</a></p>
+    </div>
+    <div class="ga-card">
+      <h3>Gruppo Agila [DA COMPILARE: Città 3]</h3>
+      <p>[DA COMPILARE: Via e numero civico], [DA COMPILARE: CAP] [DA COMPILARE: Città 3] ([DA COMPILARE: sigla provincia])<br>
+      <a href="#contatti" data-evento="chiamata" data-sede="sede-3">[DA COMPILARE: telefono]</a></p>
+      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/sede-3/">Scopri la sede di [DA COMPILARE: Città 3]</a></p>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>

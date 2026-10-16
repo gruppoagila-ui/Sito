@@ -1,0 +1,333 @@
+<style>
+/* Stile delle pagine sede Gruppo Agila.
+   Tutte le regole sono limitate a .ga-sede per non interferire con il tema WordPress.
+   Per adattare i colori al brand modificare solo le variabili qui sotto. */
+.ga-sede {
+  --ga-primario: #0b5c8a;
+  --ga-primario-scuro: #08466a;
+  --ga-accento: #e8772e;
+  --ga-whatsapp: #1fa855;
+  --ga-testo: #1f2933;
+  --ga-testo-tenue: #52606d;
+  --ga-sfondo-tenue: #f3f7fa;
+  --ga-bordo: #d9e2ec;
+  --ga-raggio: 12px;
+  color: var(--ga-testo);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.ga-sede *, .ga-sede *::before, .ga-sede *::after { box-sizing: border-box; }
+.ga-sede h1, .ga-sede h2, .ga-sede h3 { line-height: 1.25; color: var(--ga-testo); margin: 0 0 .6em; }
+.ga-sede h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.ga-sede h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.ga-sede h3 { font-size: 1.15rem; }
+.ga-sede p { margin: 0 0 1em; }
+.ga-sede a { color: var(--ga-primario); }
+.ga-sede section { padding: 48px 0; }
+.ga-sede .ga-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+
+.ga-sede .ga-breadcrumb { font-size: .9rem; color: var(--ga-testo-tenue); padding: 16px 0 0; }
+.ga-sede .ga-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.ga-sede .ga-breadcrumb li + li::before { content: "›"; margin-right: 6px; }
+
+.ga-sede .ga-hero { background: linear-gradient(135deg, var(--ga-primario), var(--ga-primario-scuro)); color: #fff; border-radius: var(--ga-raggio); margin: 16px 0 0; padding: 48px 0; }
+.ga-sede .ga-hero h1, .ga-sede .ga-hero p { color: #fff; }
+.ga-sede .ga-hero .ga-sottotitolo { font-size: 1.15rem; opacity: .95; max-width: 720px; }
+.ga-sede .ga-cta-riga { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 8px; }
+.ga-sede .ga-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+.ga-sede .ga-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+.ga-sede .ga-btn-accento { background: var(--ga-accento); color: #fff; }
+.ga-sede .ga-btn-whatsapp { background: var(--ga-whatsapp); color: #fff; }
+.ga-sede .ga-btn-chiaro { background: #fff; color: var(--ga-primario); }
+.ga-sede .ga-btn-bordo { border: 2px solid var(--ga-primario); color: var(--ga-primario); background: transparent; }
+.ga-sede .ga-badge-lista { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .95rem; }
+.ga-sede .ga-badge-lista li::before { content: "✓ "; font-weight: 700; color: #ffd8b8; }
+
+.ga-sede .ga-griglia { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.ga-sede .ga-card { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 24px; }
+.ga-sede .ga-card .ga-icona { font-size: 2rem; line-height: 1; margin-bottom: 12px; display: block; }
+.ga-sede .ga-card p:last-child { margin-bottom: 0; }
+.ga-sede .ga-tenue { background: var(--ga-sfondo-tenue); border-radius: var(--ga-raggio); }
+
+.ga-sede .ga-passi { counter-reset: passo; list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.ga-sede .ga-passi li { counter-increment: passo; background: #fff; border-radius: var(--ga-raggio); padding: 24px; border: 1px solid var(--ga-bordo); }
+.ga-sede .ga-passi li::before { content: counter(passo); display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--ga-primario); color: #fff; font-weight: 700; margin-bottom: 12px; }
+
+.ga-sede .ga-zone { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ga-sede .ga-zone li { background: #fff; border: 1px solid var(--ga-bordo); border-radius: 999px; padding: 6px 14px; font-size: .95rem; }
+
+.ga-sede .ga-contatti { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+.ga-sede .ga-contatti dl { margin: 0; }
+.ga-sede .ga-contatti dt { font-weight: 700; margin-top: 14px; }
+.ga-sede .ga-contatti dd { margin: 2px 0 0; }
+.ga-sede .ga-orari { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.ga-sede .ga-orari td { padding: 4px 0; border-bottom: 1px solid var(--ga-bordo); }
+.ga-sede .ga-orari td:last-child { text-align: right; }
+.ga-sede .ga-mappa { width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: var(--ga-raggio); }
+
+.ga-sede .ga-faq details { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 16px 20px; margin-bottom: 12px; }
+.ga-sede .ga-faq summary { font-weight: 700; cursor: pointer; }
+.ga-sede .ga-faq details p { margin: 12px 0 0; }
+
+.ga-sede .ga-cta-finale { background: var(--ga-accento); color: #fff; border-radius: var(--ga-raggio); text-align: center; padding: 48px 16px; margin-bottom: 48px; }
+.ga-sede .ga-cta-finale h2, .ga-sede .ga-cta-finale p { color: #fff; }
+.ga-sede .ga-cta-finale .ga-cta-riga { justify-content: center; }
+.ga-sede .ga-cta-finale .ga-btn-accento { background: var(--ga-primario); }
+
+/* Barra contatti fissa su smartphone: chiamata e WhatsApp sempre a portata di pollice */
+.ga-sede .ga-barra-mobile { display: none; }
+@media (max-width: 700px) {
+  .ga-sede section { padding: 32px 0; }
+  .ga-sede .ga-hero { border-radius: 0; margin-left: -16px; margin-right: -16px; }
+  .ga-sede .ga-btn { width: 100%; justify-content: center; }
+  .ga-sede .ga-barra-mobile { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; box-shadow: 0 -4px 14px rgba(0,0,0,.15); }
+  .ga-sede .ga-barra-mobile a { padding: 14px 8px; text-align: center; font-weight: 700; color: #fff; text-decoration: none; }
+  .ga-sede .ga-barra-mobile a:first-child { background: var(--ga-primario); }
+  .ga-sede .ga-barra-mobile a:last-child { background: var(--ga-whatsapp); }
+  .ga-sede .ga-cta-finale { margin-bottom: 72px; }
+}
+</style>
+<div class="ga-sede">
+<div class="ga-wrap">
+
+<nav class="ga-breadcrumb" aria-label="Percorso">
+  <ol>
+    <li><a href="https://www.gruppoagila.it">Home</a></li>
+    <li><a href="https://www.gruppoagila.it/sedi/">Le nostre sedi</a></li>
+    <li aria-current="page">[DA COMPILARE: Città 2]</li>
+  </ol>
+</nav>
+
+<header class="ga-hero">
+  <div class="ga-wrap">
+    <h1>Badanti, Colf e Babysitter a [DA COMPILARE: Città 2]</h1>
+    <p class="ga-sottotitolo">Gruppo Agila [DA COMPILARE: Città 2]: troviamo la persona giusta per la tua famiglia e gestiamo contratto e buste paga al posto tuo.</p>
+    <div class="ga-cta-riga">
+  <a class="ga-btn ga-btn-chiaro" href="#contatti" data-evento="chiamata" data-sede="sede-2">📞 Chiama la sede</a>
+  <a class="ga-btn ga-btn-whatsapp" href="#contatti" target="_blank" rel="noopener" data-evento="whatsapp" data-sede="sede-2">💬 Scrivici su WhatsApp</a>
+  <a class="ga-btn ga-btn-accento" href="#contatti" data-evento="vai_contatti" data-sede="sede-2">Richiedi un colloquio gratuito</a>
+</div>
+    <ul class="ga-badge-lista">
+    <li>Agenzia per il Lavoro autorizzata dal Ministero del Lavoro</li>
+    <li>Personale selezionato, con colloquio e verifica delle referenze</li>
+    <li>Gestione completa di contratto, buste paga e contributi INPS</li>
+    <li>Un referente dedicato nella sede di [DA COMPILARE: Città 2]</li>
+    </ul>
+  </div>
+</header>
+
+<section>
+  <h2>La sede Gruppo Agila di [DA COMPILARE: Città 2]</h2>
+  <p>[DA COMPILARE: 2-3 frasi uniche su questa sede.]</p>
+  <p>Agenzia per il Lavoro autorizzata dal Ministero del Lavoro (aut. n. [DA COMPILARE: verificare numero, es. 0019245]).</p>
+</section>
+
+<section>
+  <h2>I nostri servizi a [DA COMPILARE: Città 2]</h2>
+  <div class="ga-griglia">
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">👵</span><h3>Badanti a [DA COMPILARE: Città 2]</h3><p>Assistenza ad anziani e persone non autosufficienti: badanti conviventi o a ore, scelte in base alle reali esigenze della persona da assistere e della famiglia.</p></div>
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">🏠</span><h3>Colf a [DA COMPILARE: Città 2]</h3><p>Collaboratrici domestiche per pulizie, stiro e gestione della casa, a tempo pieno o part-time.</p></div>
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">🧸</span><h3>Babysitter a [DA COMPILARE: Città 2]</h3><p>Babysitter affidabili per bambini di ogni età: tutti i giorni, dopo la scuola o quando ti serve.</p></div>
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">📄</span><h3>Gestione contratti e buste paga</h3><p>Assunzione secondo il CCNL del lavoro domestico, buste paga, contributi INPS, TFR e cessazioni: pensiamo a tutto noi, senza pensieri per la famiglia.</p></div>
+  </div>
+</section>
+
+<section class="ga-tenue">
+  <div class="ga-wrap">
+  <h2>Come funziona</h2>
+  <ol class="ga-passi">
+    <li><h3>Contattaci</h3><p>Chiama, scrivi su WhatsApp o vieni nella sede di [DA COMPILARE: Città 2].</p></li>
+    <li><h3>Analisi delle esigenze</h3><p>Ascoltiamo la famiglia e definiamo insieme il profilo ideale.</p></li>
+    <li><h3>Selezione e colloqui</h3><p>Ti presentiamo candidati selezionati, con referenze verificate.</p></li>
+    <li><h3>Inserimento e contratto</h3><p>Gestiamo assunzione e adempimenti e restiamo al tuo fianco.</p></li>
+  </ol>
+  </div>
+</section>
+
+<section>
+  <h2>Zone servite dalla sede di [DA COMPILARE: Città 2]</h2>
+  <p>Aiutiamo le famiglie di [DA COMPILARE: Città 2] e dei comuni vicini:</p>
+  <ul class="ga-zone">
+    <li>[DA COMPILARE: Città 2]</li>
+    <li>[DA COMPILARE: Comune vicino 1]</li>
+    <li>[DA COMPILARE: Comune vicino 2]</li>
+    <li>[DA COMPILARE: Comune vicino 3]</li>
+  </ul>
+</section>
+
+<section id="contatti">
+  <h2>Contatti e orari della sede di [DA COMPILARE: Città 2]</h2>
+  <div class="ga-contatti">
+    <div class="ga-card">
+      <dl>
+        <dt>Indirizzo</dt><dd>[DA COMPILARE: Via e numero civico], [DA COMPILARE: CAP] [DA COMPILARE: Città 2] ([DA COMPILARE: sigla provincia])</dd>
+        <dt>Telefono</dt><dd><a href="#contatti" data-evento="chiamata" data-sede="sede-2">[DA COMPILARE: telefono]</a></dd>
+        <dt>WhatsApp</dt><dd><a href="#contatti" target="_blank" rel="noopener" data-evento="whatsapp" data-sede="sede-2">[DA COMPILARE: numero WhatsApp]</a></dd>
+        <dt>Email</dt><dd><a href="mailto:[DA COMPILARE: email della sede]" data-evento="email" data-sede="sede-2">[DA COMPILARE: email della sede]</a></dd>
+        <dt>Referente</dt><dd>[DA COMPILARE: Nome e cognome del referente, oppure lasciare vuoto]</dd>
+        <dt>Come raggiungerci</dt><dd>[DA COMPILARE: indicazioni per raggiungere la sede]</dd>
+      </dl>
+      <h3 style="margin-top:20px">Orari di apertura</h3>
+      <table class="ga-orari">
+        <tr><td>Lunedì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Martedì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Mercoledì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Giovedì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Venerdì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Sabato</td><td>Chiuso</td></tr>
+        <tr><td>Domenica</td><td>Chiuso</td></tr>
+      </table>
+    </div>
+    <div>
+      <div class="ga-mappa ga-tenue" style="display:grid;place-items:center">Mappa: inserire l'indirizzo in sedi.json</div>
+      <h3 style="margin-top:20px">Preferisci essere ricontattato?</h3>
+      <p><a class="ga-btn ga-btn-accento" href="https://www.gruppoagila.it/contatti/?sede=sede-2" data-evento="richiesta_preventivo" data-sede="sede-2">Richiedi un colloquio gratuito</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="ga-faq">
+  <h2>Domande frequenti</h2>
+    <details><summary>Come posso trovare una badante a [DA COMPILARE: Città 2]?</summary><p>Contatta la sede Gruppo Agila di [DA COMPILARE: Città 2] per telefono, su WhatsApp o tramite il modulo di contatto: fissiamo un primo colloquio per capire le esigenze della persona da assistere e ti proponiamo profili selezionati e referenziati.</p></details>
+    <details><summary>Cercate anche colf e babysitter a [DA COMPILARE: Città 2] e dintorni?</summary><p>Sì. Oltre alle badanti selezioniamo collaboratrici domestiche (colf) e babysitter per le famiglie di [DA COMPILARE: Città 2] e dei comuni vicini.</p></details>
+    <details><summary>Vi occupate anche del contratto e delle buste paga?</summary><p>Sì: gestiamo l&#x27;assunzione nel rispetto del CCNL del lavoro domestico, le buste paga, i contributi INPS e le pratiche di fine rapporto, così la famiglia non deve pensare alla burocrazia.</p></details>
+    <details><summary>Serve un appuntamento per venire nella sede di [DA COMPILARE: Città 2]?</summary><p>Ti consigliamo di chiamarci prima: così il referente può dedicarti tutto il tempo necessario. Siamo aperti: Lunedì 09:00–13:00, 14:30–18:30; Martedì 09:00–13:00, 14:30–18:30; Mercoledì 09:00–13:00, 14:30–18:30; Giovedì 09:00–13:00, 14:30–18:30; Venerdì 09:00–13:00, 14:30–18:30.</p></details>
+</section>
+
+<section>
+  <h2>Le altre sedi Gruppo Agila</h2>
+  <ul>
+    <li><a href="https://www.gruppoagila.it/sedi/sede-1/">Gruppo Agila [DA COMPILARE: Città 1]</a></li>
+    <li><a href="https://www.gruppoagila.it/sedi/sede-3/">Gruppo Agila [DA COMPILARE: Città 3]</a></li>
+  </ul>
+</section>
+
+<div class="ga-cta-finale">
+  <h2>Cerchi una badante, una colf o una babysitter a [DA COMPILARE: Città 2]?</h2>
+  <p>Parlane con noi: il primo colloquio è senza impegno.</p>
+  <div class="ga-cta-riga">
+  <a class="ga-btn ga-btn-chiaro" href="#contatti" data-evento="chiamata" data-sede="sede-2">📞 Chiama la sede</a>
+  <a class="ga-btn ga-btn-whatsapp" href="#contatti" target="_blank" rel="noopener" data-evento="whatsapp" data-sede="sede-2">💬 Scrivici su WhatsApp</a>
+  <a class="ga-btn ga-btn-accento" href="#contatti" data-evento="vai_contatti" data-sede="sede-2">Richiedi un colloquio gratuito</a>
+</div>
+</div>
+
+</div>
+
+<nav class="ga-barra-mobile" aria-label="Contatti rapidi">
+  <a href="#contatti" data-evento="chiamata" data-sede="sede-2">📞 Chiama</a>
+  <a href="#contatti" target="_blank" rel="noopener" data-evento="whatsapp" data-sede="sede-2">💬 WhatsApp</a>
+</nav>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://www.gruppoagila.it/sedi/sede-2/#sede",
+      "name": "Gruppo Agila - [DA COMPILARE: Città 2]",
+      "url": "https://www.gruppoagila.it/sedi/sede-2/",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Gruppo Agila",
+        "url": "https://www.gruppoagila.it"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "14:30",
+          "closes": "18:30"
+        }
+      ],
+      "areaServed": [],
+      "knowsAbout": [
+        "Badanti",
+        "Colf",
+        "Babysitter",
+        "Lavoro domestico"
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.gruppoagila.it"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Le nostre sedi",
+          "item": "https://www.gruppoagila.it/sedi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "[DA COMPILARE: Città 2]",
+          "item": "https://www.gruppoagila.it/sedi/sede-2/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Come posso trovare una badante a [DA COMPILARE: Città 2]?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contatta la sede Gruppo Agila di [DA COMPILARE: Città 2] per telefono, su WhatsApp o tramite il modulo di contatto: fissiamo un primo colloquio per capire le esigenze della persona da assistere e ti proponiamo profili selezionati e referenziati."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cercate anche colf e babysitter a [DA COMPILARE: Città 2] e dintorni?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì. Oltre alle badanti selezioniamo collaboratrici domestiche (colf) e babysitter per le famiglie di [DA COMPILARE: Città 2] e dei comuni vicini."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vi occupate anche del contratto e delle buste paga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì: gestiamo l'assunzione nel rispetto del CCNL del lavoro domestico, le buste paga, i contributi INPS e le pratiche di fine rapporto, così la famiglia non deve pensare alla burocrazia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Serve un appuntamento per venire nella sede di [DA COMPILARE: Città 2]?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ti consigliamo di chiamarci prima: così il referente può dedicarti tutto il tempo necessario. Siamo aperti: Lunedì 09:00–13:00, 14:30–18:30; Martedì 09:00–13:00, 14:30–18:30; Mercoledì 09:00–13:00, 14:30–18:30; Giovedì 09:00–13:00, 14:30–18:30; Venerdì 09:00–13:00, 14:30–18:30."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
