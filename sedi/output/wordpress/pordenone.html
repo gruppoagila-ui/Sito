@@ -1,0 +1,492 @@
+<style>
+/* Stile delle pagine sede Gruppo Agila.
+   Tutte le regole sono limitate a .ga-sede per non interferire con il tema WordPress.
+   Per adattare i colori al brand modificare solo le variabili qui sotto. */
+.ga-sede {
+  --ga-primario: #0b5c8a;
+  --ga-primario-scuro: #08466a;
+  --ga-accento: #e8772e;
+  --ga-whatsapp: #1fa855;
+  --ga-testo: #1f2933;
+  --ga-testo-tenue: #52606d;
+  --ga-sfondo-tenue: #f3f7fa;
+  --ga-bordo: #d9e2ec;
+  --ga-raggio: 12px;
+  color: var(--ga-testo);
+  font-size: 17px;
+  line-height: 1.6;
+}
+.ga-sede *, .ga-sede *::before, .ga-sede *::after { box-sizing: border-box; }
+.ga-sede h1, .ga-sede h2, .ga-sede h3 { line-height: 1.25; color: var(--ga-testo); margin: 0 0 .6em; }
+.ga-sede h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); }
+.ga-sede h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); }
+.ga-sede h3 { font-size: 1.15rem; }
+.ga-sede p { margin: 0 0 1em; }
+.ga-sede a { color: var(--ga-primario); }
+.ga-sede section { padding: 48px 0; }
+.ga-sede section.ga-tenue { padding: 40px 32px; }
+.ga-sede .ga-wrap { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
+.ga-sede .ga-tenue { background: var(--ga-sfondo-tenue); border-radius: var(--ga-raggio); }
+.ga-sede .ga-tenue-testo { color: var(--ga-testo-tenue); font-size: .95rem; }
+.ga-sede .ga-spazio-sopra { margin-top: 20px; }
+
+.ga-sede .ga-breadcrumb { font-size: .9rem; color: var(--ga-testo-tenue); padding: 16px 0 0; }
+.ga-sede .ga-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.ga-sede .ga-breadcrumb li + li::before { content: "›"; margin-right: 6px; }
+
+/* Intestazione: testo a sinistra, riquadro contatti a destra (sotto, su smartphone) */
+.ga-sede .ga-hero { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr); gap: 32px; align-items: center; background: linear-gradient(135deg, var(--ga-primario), var(--ga-primario-scuro)); color: #fff; border-radius: var(--ga-raggio); margin: 16px 0 0; padding: 40px; }
+.ga-sede .ga-hero-singolo { grid-template-columns: 1fr; }
+.ga-sede .ga-hero h1, .ga-sede .ga-hero p { color: #fff; }
+.ga-sede .ga-occhiello { text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; font-weight: 700; opacity: .85; margin-bottom: .5em; }
+.ga-sede .ga-hero .ga-sottotitolo { font-size: 1.15rem; opacity: .95; max-width: 680px; }
+.ga-sede .ga-badge-lista { list-style: none; padding: 0; margin: 0 0 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 20px; font-size: .95rem; }
+.ga-sede .ga-badge-lista li::before { content: "✓ "; font-weight: 700; color: #ffd8b8; }
+
+.ga-sede .ga-box-contatto { background: #fff; color: var(--ga-testo); border-radius: var(--ga-raggio); padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.2); display: grid; gap: 10px; }
+.ga-sede .ga-box-contatto p { color: var(--ga-testo); margin: 0; }
+.ga-sede .ga-box-titolo { font-size: 1.35rem; font-weight: 800; }
+.ga-sede .ga-box-sottotitolo { color: var(--ga-testo-tenue) !important; margin-bottom: 4px !important; }
+.ga-sede .ga-box-nota { font-size: .85rem; color: var(--ga-testo-tenue) !important; text-align: center; margin-top: 4px !important; }
+
+.ga-sede .ga-cta-riga { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 0; }
+.ga-sede .ga-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+.ga-sede .ga-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+.ga-sede .ga-btn-pieno { width: 100%; }
+.ga-sede .ga-btn-accento { background: var(--ga-accento); color: #fff; }
+.ga-sede .ga-btn-whatsapp { background: var(--ga-whatsapp); color: #fff; }
+.ga-sede .ga-btn-chiaro { background: #fff; color: var(--ga-primario); }
+.ga-sede .ga-btn-bordo { border: 2px solid var(--ga-primario); color: var(--ga-primario); background: transparent; }
+
+.ga-sede .ga-numeri { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0 0; }
+.ga-sede .ga-numero { background: var(--ga-sfondo-tenue); border-radius: var(--ga-raggio); padding: 18px 20px; display: grid; gap: 2px; }
+.ga-sede .ga-numero strong { font-size: 1.5rem; color: var(--ga-primario); line-height: 1.2; }
+.ga-sede .ga-numero span { font-size: .95rem; color: var(--ga-testo-tenue); }
+
+.ga-sede .ga-griglia { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.ga-sede .ga-card { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 24px; }
+.ga-sede .ga-card .ga-icona { font-size: 2rem; line-height: 1; margin-bottom: 12px; display: block; }
+.ga-sede .ga-card p:last-child { margin-bottom: 0; }
+
+.ga-sede .ga-urgenza { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; background: var(--ga-accento); color: #fff; border-radius: var(--ga-raggio); padding: 28px 32px; margin: 0 0 48px; }
+.ga-sede .ga-urgenza h2 { color: #fff; font-size: clamp(1.2rem, 2.4vw, 1.5rem); margin-bottom: .3em; }
+.ga-sede .ga-urgenza p { margin: 0; }
+.ga-sede .ga-urgenza .ga-btn-chiaro { color: var(--ga-accento); }
+
+.ga-sede .ga-passi { counter-reset: passo; list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.ga-sede .ga-passi li { counter-increment: passo; background: #fff; border-radius: var(--ga-raggio); padding: 24px; border: 1px solid var(--ga-bordo); }
+.ga-sede .ga-passi li::before { content: counter(passo); display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--ga-primario); color: #fff; font-weight: 700; margin-bottom: 12px; }
+
+.ga-sede .ga-zone { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.ga-sede .ga-zone li { background: #fff; border: 1px solid var(--ga-bordo); border-radius: 999px; padding: 6px 14px; font-size: .95rem; }
+.ga-sede .ga-contributi { margin-bottom: 48px; }
+.ga-sede .ga-contributi p:last-child { margin-bottom: 0; }
+
+.ga-sede .ga-contatti { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
+.ga-sede .ga-contatti dl { margin: 0; }
+.ga-sede .ga-contatti dt { font-weight: 700; margin-top: 14px; }
+.ga-sede .ga-contatti dt:first-child { margin-top: 0; }
+.ga-sede .ga-contatti dd { margin: 2px 0 0; }
+.ga-sede .ga-orari { border-collapse: collapse; width: 100%; font-size: .95rem; }
+.ga-sede .ga-orari td { padding: 4px 0; border-bottom: 1px solid var(--ga-bordo); }
+.ga-sede .ga-orari td:last-child { text-align: right; }
+.ga-sede .ga-mappa { display: block; width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: var(--ga-raggio); margin-bottom: 12px; background: var(--ga-sfondo-tenue); }
+
+.ga-sede .ga-faq details { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 16px 20px; margin-bottom: 12px; }
+.ga-sede .ga-faq summary { font-weight: 700; cursor: pointer; }
+.ga-sede .ga-faq details p { margin: 12px 0 0; }
+
+.ga-sede .ga-cta-finale { background: var(--ga-primario); color: #fff; border-radius: var(--ga-raggio); text-align: center; padding: 48px 16px; margin-bottom: 48px; }
+.ga-sede .ga-cta-finale h2, .ga-sede .ga-cta-finale p { color: #fff; }
+.ga-sede .ga-cta-finale .ga-cta-riga { justify-content: center; }
+
+/* Barra contatti fissa su smartphone: chiamata e WhatsApp sempre a portata di pollice */
+.ga-sede .ga-barra-mobile { display: none; }
+@media (max-width: 860px) {
+  .ga-sede .ga-hero { grid-template-columns: 1fr; padding: 32px 20px; }
+}
+@media (max-width: 700px) {
+  .ga-sede section { padding: 32px 0; }
+  .ga-sede section.ga-tenue { padding: 28px 20px; }
+  .ga-sede .ga-hero { border-radius: 0; margin-left: -16px; margin-right: -16px; }
+  .ga-sede .ga-btn { width: 100%; }
+  .ga-sede .ga-urgenza { padding: 24px 20px; }
+  .ga-sede .ga-barra-mobile { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; box-shadow: 0 -4px 14px rgba(0,0,0,.15); }
+  .ga-sede .ga-barra-mobile a { padding: 14px 8px; text-align: center; font-weight: 700; color: #fff; text-decoration: none; }
+  .ga-sede .ga-barra-mobile a:first-child { background: var(--ga-primario); }
+  .ga-sede .ga-barra-mobile a:last-child { background: var(--ga-whatsapp); }
+  .ga-sede .ga-cta-finale { margin-bottom: 72px; }
+}
+</style>
+<div class="ga-sede">
+<div class="ga-wrap">
+
+<nav class="ga-breadcrumb" aria-label="Percorso">
+  <ol>
+    <li><a href="https://www.gruppoagila.it">Home</a></li>
+    <li><a href="https://www.gruppoagila.it/sedi/">Le nostre sedi</a></li>
+    <li aria-current="page">Pordenone</li>
+  </ol>
+</nav>
+
+<header class="ga-hero">
+  <div class="ga-hero-testo">
+    <p class="ga-occhiello">Gruppo Agila · Sede di Pordenone</p>
+    <h1>Agenzia Badanti, Colf e Babysitter a Pordenone</h1>
+    <p class="ga-sottotitolo">Troviamo la persona giusta per assistere i tuoi cari a Pordenone e provincia e ti seguiamo in tutte le pratiche di assunzione. Prima consulenza gratuita.</p>
+    <ul class="ga-badge-lista">
+      <li>Agenzia autorizzata dal Ministero del Lavoro (n. 0019245)</li>
+      <li>Oltre 30 anni di esperienza</li>
+      <li>Prima consulenza gratuita</li>
+      <li>Gestione completa di contratto e pratiche</li>
+    </ul>
+  </div>
+  <aside class="ga-box-contatto" aria-label="Richiedi una consulenza gratuita">
+      <p class="ga-box-titolo">Consulenza gratuita</p>
+      <p class="ga-box-sottotitolo">Parla subito con la sede di Pordenone</p>
+      <a class="ga-btn ga-btn-accento ga-btn-pieno" href="tel:+3904341754524" data-evento="chiamata" data-sede="pordenone">📞 +39 0434 1754524</a>
+      <a class="ga-btn ga-btn-whatsapp ga-btn-pieno" href="https://wa.me/390432681739?text=Buongiorno%2C%20vorrei%20informazioni%20sui%20vostri%20servizi%20a%20Pordenone." target="_blank" rel="noopener" data-evento="whatsapp" data-sede="pordenone">💬 Scrivici su WhatsApp</a>
+      <a class="ga-btn ga-btn-bordo ga-btn-pieno" href="mailto:info@gruppoagila.it?subject=Richiesta%20informazioni%20-%20sede%20di%20Pordenone" data-evento="email" data-sede="pordenone">✉️ info@gruppoagila.it</a>
+      <p class="ga-box-nota">Lun–Ven 09:00–13:00 e 14:30–18:30<br>Viale Marconi, 54, 33170 Pordenone (PN)</p>
+    </aside>
+</header>
+
+<div class="ga-numeri">
+    <div class="ga-numero"><strong>Dal 1987</strong><span>al fianco delle famiglie</span></div>
+    <div class="ga-numero"><strong>Oltre 2.000</strong><span>famiglie aiutate in FVG negli ultimi 10 anni</span></div>
+    <div class="ga-numero"><strong>24–48 ore</strong><span>per una soluzione temporanea nei casi urgenti</span></div>
+    <div class="ga-numero"><strong>Gratuita</strong><span>la prima consulenza</span></div>
+</div>
+
+<section>
+  <h2>La sede Gruppo Agila di Pordenone</h2>
+  <p>In Viale Marconi 54 c&#x27;è la sede di Gruppo Agila per Pordenone e la Destra Tagliamento: un punto di riferimento vicino a casa per le famiglie che cercano una badante, una colf o una babysitter.</p>
+  <p>Seguiamo le famiglie di Pordenone e della provincia, da Sacile a Spilimbergo, da Maniago a San Vito al Tagliamento, con l&#x27;esperienza di oltre 30 anni di Gruppo Agila nella selezione del personale domestico e nella gestione delle pratiche di assunzione.</p>
+  <p class="ga-tenue-testo">Agenzia per il Lavoro autorizzata dal Ministero del Lavoro (aut. n. 0019245).</p>
+</section>
+
+<section>
+  <h2>I nostri servizi a Pordenone</h2>
+  <div class="ga-griglia">
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">👵</span><h3>Badanti a Pordenone</h3><p>Badanti conviventi H24 o a ore per anziani e persone non autosufficienti, scelte in base alle reali necessità della persona da assistere e della famiglia.</p></div>
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">🏠</span><h3>Colf a Pordenone</h3><p>Collaboratrici domestiche conviventi o a ore per pulizie, stiro e gestione della casa, a tempo pieno o part-time.</p></div>
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">🧸</span><h3>Babysitter a Pordenone</h3><p>Babysitter affidabili per bambini di ogni età: tutti i giorni, dopo la scuola o quando ti serve.</p></div>
+    <div class="ga-card"><span class="ga-icona" aria-hidden="true">📄</span><h3>Contratto e pratiche</h3><p>Ti seguiamo nell&#x27;assunzione secondo il CCNL del lavoro domestico: contratto, buste paga, contributi INPS e pratiche di fine rapporto.</p></div>
+  </div>
+</section>
+
+<div class="ga-urgenza">
+  <div>
+    <h2>Dimissione ospedaliera improvvisa o badante da sostituire?</h2>
+    <p>Attiviamo una ricerca prioritaria per trovare una soluzione temporanea in 24–48 ore.</p>
+  </div>
+  <a class="ga-btn ga-btn-chiaro" href="tel:+3904341754524" data-evento="chiamata_urgente" data-sede="pordenone">📞 Chiama ora</a>
+</div>
+
+<section class="ga-tenue">
+  <h2>Come funziona</h2>
+  <ol class="ga-passi">
+    <li><h3>Contattaci</h3><p>Chiama, scrivi su WhatsApp o vieni nella sede di Pordenone: la prima consulenza è gratuita.</p></li>
+    <li><h3>Analisi delle esigenze</h3><p>Ascoltiamo la famiglia e definiamo insieme il profilo ideale.</p></li>
+    <li><h3>Selezione e colloqui</h3><p>Ti presentiamo candidati selezionati, con referenze verificate.</p></li>
+    <li><h3>Inserimento e contratto</h3><p>Ci occupiamo delle pratiche di assunzione e restiamo al tuo fianco.</p></li>
+  </ol>
+</section>
+
+<section>
+  <h2>Zone servite dalla sede di Pordenone</h2>
+  <p>Aiutiamo le famiglie di Pordenone e di queste zone:</p>
+  <ul class="ga-zone">
+    <li>Porcia</li>
+    <li>Cordenons</li>
+    <li>Roveredo in Piano</li>
+    <li>Fontanafredda</li>
+    <li>Sacile</li>
+    <li>Fiume Veneto</li>
+    <li>Azzano Decimo</li>
+    <li>Pasiano di Pordenone</li>
+    <li>Prata di Pordenone</li>
+    <li>Zoppola</li>
+    <li>San Quirino</li>
+    <li>Aviano</li>
+    <li>Maniago</li>
+    <li>Spilimbergo</li>
+    <li>San Vito al Tagliamento</li>
+    <li>Casarsa della Delizia</li>
+  </ul>
+</section>
+
+<section class="ga-tenue ga-contributi">
+  <h2>Contributi regionali per l'assistenza in FVG</h2>
+  <p>In Friuli Venezia Giulia le famiglie che assumono un assistente familiare possono accedere a contributi regionali. Ti aiutiamo a capire quali puoi richiedere.</p>
+  <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/contributi-regionali/">Scopri i contributi regionali</a></p>
+</section>
+
+<section id="contatti">
+  <h2>Contatti e orari della sede di Pordenone</h2>
+  <div class="ga-contatti">
+    <div class="ga-card">
+      <dl>
+        <dt>Indirizzo</dt><dd>Gruppo Agila<br>Viale Marconi, 54, 33170 Pordenone (PN)</dd>
+        <dt>Telefono</dt><dd><a href="tel:+3904341754524" data-evento="chiamata" data-sede="pordenone">+39 0434 1754524</a></dd>
+        <dt>WhatsApp</dt><dd><a href="https://wa.me/390432681739?text=Buongiorno%2C%20vorrei%20informazioni%20sui%20vostri%20servizi%20a%20Pordenone." target="_blank" rel="noopener" data-evento="whatsapp" data-sede="pordenone">+39 0432 681739</a></dd>
+        <dt>Email</dt><dd><a href="mailto:info@gruppoagila.it" data-evento="email" data-sede="pordenone">info@gruppoagila.it</a></dd>
+      </dl>
+      <h3 class="ga-spazio-sopra">Orari di apertura</h3>
+      <table class="ga-orari">
+        <tr><td>Lunedì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Martedì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Mercoledì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Giovedì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Venerdì</td><td>09:00–13:00, 14:30–18:30</td></tr>
+        <tr><td>Sabato</td><td>09:00–13:00 (su appuntamento)</td></tr>
+        <tr><td>Domenica</td><td>Chiuso</td></tr>
+      </table>
+    </div>
+    <div>
+      <iframe class="ga-mappa" title="Mappa della sede Gruppo Agila di Pordenone" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Gruppo%20Agila%2C%20Viale%20Marconi%2C%2054%2C%2033170%20Pordenone%20%28PN%29&amp;output=embed"></iframe>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Gruppo%20Agila%20Viale%20Marconi%2C%2054%2C%2033170%20Pordenone%20%28PN%29" target="_blank" rel="noopener" data-evento="indicazioni" data-sede="pordenone">Indicazioni stradali e recensioni su Google →</a></p>
+      <p><a class="ga-btn ga-btn-accento" href="https://www.gruppoagila.it/contatti/?sede=pordenone" data-evento="richiesta_contatto" data-sede="pordenone">Richiedi di essere ricontattato</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="ga-faq">
+  <h2>Domande frequenti sulla sede di Pordenone</h2>
+  <details><summary>Come posso trovare una badante a Pordenone?</summary><p>Contatta la sede Gruppo Agila di Pordenone per telefono, su WhatsApp o via email: la prima consulenza è gratuita. Valutiamo insieme le necessità della persona da assistere e ti proponiamo profili selezionati e referenziati.</p></details>
+  <details><summary>Cosa succede in caso di urgenza, ad esempio una dimissione ospedaliera improvvisa?</summary><p>Attiviamo una ricerca prioritaria per trovare una soluzione temporanea in 24–48 ore. Nei casi urgenti puoi contattarci anche fuori dagli orari d&#x27;ufficio al numero principale.</p></details>
+  <details><summary>Seguite anche le famiglie fuori Pordenone?</summary><p>Sì: dalla sede di Pordenone seguiamo anche le famiglie dei comuni e delle zone vicine, ad esempio Porcia, Cordenons, Roveredo in Piano, Fontanafredda, Sacile, Fiume Veneto.</p></details>
+  <details><summary>Chi è il datore di lavoro della badante o della colf?</summary><p>Il contratto viene firmato direttamente tra la famiglia e la lavoratrice, nel rispetto del CCNL del lavoro domestico. Noi ti seguiamo in tutte le pratiche, così non devi pensare alla burocrazia.</p></details>
+  <details><summary>Esistono contributi regionali per pagare la badante?</summary><p>In Friuli Venezia Giulia sono previsti contributi regionali per le famiglie che assumono un assistente familiare. Ti aiutiamo a capire quali puoi richiedere.</p></details>
+  <details><summary>Serve un appuntamento per venire nella sede di Pordenone?</summary><p>Ti consigliamo di chiamarci prima: così possiamo dedicarti tutto il tempo necessario. Orari: Lunedì 09:00–13:00, 14:30–18:30; Martedì 09:00–13:00, 14:30–18:30; Mercoledì 09:00–13:00, 14:30–18:30; Giovedì 09:00–13:00, 14:30–18:30; Venerdì 09:00–13:00, 14:30–18:30; Sabato 09:00–13:00 (su appuntamento).</p></details>
+</section>
+
+<section>
+  <h2>Le altre sedi Gruppo Agila in Friuli Venezia Giulia</h2>
+  <ul>
+    <li><a href="https://www.gruppoagila.it/sedi/udine/">Badanti e colf a Udine</a> – Via Diego Simonetti, 1, 33100 Udine (UD)</li>
+    <li><a href="https://www.gruppoagila.it/sedi/trieste/">Badanti e colf a Trieste</a> – Via Antonio Canova, 6, 34129 Trieste (TS)</li>
+  </ul>
+</section>
+
+<div class="ga-cta-finale">
+  <h2>Cerchi una badante, una colf o una babysitter a Pordenone?</h2>
+  <p>Parlane con noi: la prima consulenza è gratuita e senza impegno.</p>
+  <div class="ga-cta-riga">
+    <a class="ga-btn ga-btn-chiaro" href="tel:+3904341754524" data-evento="chiamata" data-sede="pordenone">📞 Chiama +39 0434 1754524</a>
+    <a class="ga-btn ga-btn-whatsapp" href="https://wa.me/390432681739?text=Buongiorno%2C%20vorrei%20informazioni%20sui%20vostri%20servizi%20a%20Pordenone." target="_blank" rel="noopener" data-evento="whatsapp" data-sede="pordenone">💬 Scrivici su WhatsApp</a>
+  </div>
+</div>
+
+</div>
+
+<nav class="ga-barra-mobile" aria-label="Contatti rapidi">
+  <a href="tel:+3904341754524" data-evento="chiamata" data-sede="pordenone">📞 Chiama</a>
+  <a href="https://wa.me/390432681739?text=Buongiorno%2C%20vorrei%20informazioni%20sui%20vostri%20servizi%20a%20Pordenone." target="_blank" rel="noopener" data-evento="whatsapp" data-sede="pordenone">💬 WhatsApp</a>
+</nav>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EmploymentAgency",
+      "@id": "https://www.gruppoagila.it/sedi/pordenone/#sede",
+      "name": "Gruppo Agila Pordenone - Badanti, Colf e Babysitter",
+      "url": "https://www.gruppoagila.it/sedi/pordenone/",
+      "telephone": "+39 0434 1754524",
+      "email": "info@gruppoagila.it",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Gruppo Agila",
+        "url": "https://www.gruppoagila.it"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Viale Marconi, 54",
+        "postalCode": "33170",
+        "addressLocality": "Pordenone",
+        "addressRegion": "PN",
+        "addressCountry": "IT"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "09:00",
+          "closes": "13:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "14:30",
+          "closes": "18:30"
+        }
+      ],
+      "areaServed": [
+        "Pordenone",
+        "Porcia",
+        "Cordenons",
+        "Roveredo in Piano",
+        "Fontanafredda",
+        "Sacile",
+        "Fiume Veneto",
+        "Azzano Decimo",
+        "Pasiano di Pordenone",
+        "Prata di Pordenone",
+        "Zoppola",
+        "San Quirino",
+        "Aviano",
+        "Maniago",
+        "Spilimbergo",
+        "San Vito al Tagliamento",
+        "Casarsa della Delizia"
+      ],
+      "knowsAbout": [
+        "Badanti",
+        "Badante convivente",
+        "Colf",
+        "Babysitter",
+        "Lavoro domestico"
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servizi a Pordenone",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Badanti a Pordenone"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Colf a Pordenone"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Babysitter a Pordenone"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Contratto e pratiche"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.gruppoagila.it"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Le nostre sedi",
+          "item": "https://www.gruppoagila.it/sedi/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Pordenone",
+          "item": "https://www.gruppoagila.it/sedi/pordenone/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Come posso trovare una badante a Pordenone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contatta la sede Gruppo Agila di Pordenone per telefono, su WhatsApp o via email: la prima consulenza è gratuita. Valutiamo insieme le necessità della persona da assistere e ti proponiamo profili selezionati e referenziati."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cosa succede in caso di urgenza, ad esempio una dimissione ospedaliera improvvisa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Attiviamo una ricerca prioritaria per trovare una soluzione temporanea in 24–48 ore. Nei casi urgenti puoi contattarci anche fuori dagli orari d'ufficio al numero principale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Seguite anche le famiglie fuori Pordenone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì: dalla sede di Pordenone seguiamo anche le famiglie dei comuni e delle zone vicine, ad esempio Porcia, Cordenons, Roveredo in Piano, Fontanafredda, Sacile, Fiume Veneto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Chi è il datore di lavoro della badante o della colf?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Il contratto viene firmato direttamente tra la famiglia e la lavoratrice, nel rispetto del CCNL del lavoro domestico. Noi ti seguiamo in tutte le pratiche, così non devi pensare alla burocrazia."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Esistono contributi regionali per pagare la badante?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In Friuli Venezia Giulia sono previsti contributi regionali per le famiglie che assumono un assistente familiare. Ti aiutiamo a capire quali puoi richiedere."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Serve un appuntamento per venire nella sede di Pordenone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ti consigliamo di chiamarci prima: così possiamo dedicarti tutto il tempo necessario. Orari: Lunedì 09:00–13:00, 14:30–18:30; Martedì 09:00–13:00, 14:30–18:30; Mercoledì 09:00–13:00, 14:30–18:30; Giovedì 09:00–13:00, 14:30–18:30; Venerdì 09:00–13:00, 14:30–18:30; Sabato 09:00–13:00 (su appuntamento)."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<script>
+(function () {
+  if (window.gaSedeTracciamento) return;
+  window.gaSedeTracciamento = true;
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('.ga-sede [data-evento]');
+    if (!a) return;
+    var dati = { tipo_contatto: a.getAttribute('data-evento'), sede: a.getAttribute('data-sede') };
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: 'contatto_sede' }, dati));
+    if (typeof window.gtag === 'function') window.gtag('event', 'contatto_sede', dati);
+  });
+})();
+</script>

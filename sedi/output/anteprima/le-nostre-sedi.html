@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Le nostre sedi | Gruppo Agila - Badanti, Colf e Babysitter</title>
-<meta name="description" content="Le sedi Gruppo Agila a [DA COMPILARE: Città 1], [DA COMPILARE: Città 2], [DA COMPILARE: Città 3]: badanti, colf e babysitter selezionati vicino a te. Contatta la sede più comoda.">
+<title>Le nostre sedi in FVG: Udine, Pordenone, Trieste | Gruppo Agila</title>
+<meta name="description" content="Le sedi Gruppo Agila a Udine, Pordenone, Trieste: badanti, colf e babysitter selezionati vicino a te. Consulenza gratuita.">
 <style>body{margin:0;background:#fff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}</style>
 <style>
 /* Stile delle pagine sede Gruppo Agila.
@@ -32,30 +32,54 @@
 .ga-sede p { margin: 0 0 1em; }
 .ga-sede a { color: var(--ga-primario); }
 .ga-sede section { padding: 48px 0; }
-.ga-sede .ga-wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+.ga-sede section.ga-tenue { padding: 40px 32px; }
+.ga-sede .ga-wrap { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
+.ga-sede .ga-tenue { background: var(--ga-sfondo-tenue); border-radius: var(--ga-raggio); }
+.ga-sede .ga-tenue-testo { color: var(--ga-testo-tenue); font-size: .95rem; }
+.ga-sede .ga-spazio-sopra { margin-top: 20px; }
 
 .ga-sede .ga-breadcrumb { font-size: .9rem; color: var(--ga-testo-tenue); padding: 16px 0 0; }
 .ga-sede .ga-breadcrumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
 .ga-sede .ga-breadcrumb li + li::before { content: "›"; margin-right: 6px; }
 
-.ga-sede .ga-hero { background: linear-gradient(135deg, var(--ga-primario), var(--ga-primario-scuro)); color: #fff; border-radius: var(--ga-raggio); margin: 16px 0 0; padding: 48px 0; }
+/* Intestazione: testo a sinistra, riquadro contatti a destra (sotto, su smartphone) */
+.ga-sede .ga-hero { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr); gap: 32px; align-items: center; background: linear-gradient(135deg, var(--ga-primario), var(--ga-primario-scuro)); color: #fff; border-radius: var(--ga-raggio); margin: 16px 0 0; padding: 40px; }
+.ga-sede .ga-hero-singolo { grid-template-columns: 1fr; }
 .ga-sede .ga-hero h1, .ga-sede .ga-hero p { color: #fff; }
-.ga-sede .ga-hero .ga-sottotitolo { font-size: 1.15rem; opacity: .95; max-width: 720px; }
-.ga-sede .ga-cta-riga { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 8px; }
-.ga-sede .ga-btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
+.ga-sede .ga-occhiello { text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; font-weight: 700; opacity: .85; margin-bottom: .5em; }
+.ga-sede .ga-hero .ga-sottotitolo { font-size: 1.15rem; opacity: .95; max-width: 680px; }
+.ga-sede .ga-badge-lista { list-style: none; padding: 0; margin: 0 0 8px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 20px; font-size: .95rem; }
+.ga-sede .ga-badge-lista li::before { content: "✓ "; font-weight: 700; color: #ffd8b8; }
+
+.ga-sede .ga-box-contatto { background: #fff; color: var(--ga-testo); border-radius: var(--ga-raggio); padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,.2); display: grid; gap: 10px; }
+.ga-sede .ga-box-contatto p { color: var(--ga-testo); margin: 0; }
+.ga-sede .ga-box-titolo { font-size: 1.35rem; font-weight: 800; }
+.ga-sede .ga-box-sottotitolo { color: var(--ga-testo-tenue) !important; margin-bottom: 4px !important; }
+.ga-sede .ga-box-nota { font-size: .85rem; color: var(--ga-testo-tenue) !important; text-align: center; margin-top: 4px !important; }
+
+.ga-sede .ga-cta-riga { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0 0; }
+.ga-sede .ga-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 22px; border-radius: 999px; font-weight: 700; text-decoration: none; transition: transform .15s ease, box-shadow .15s ease; }
 .ga-sede .ga-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+.ga-sede .ga-btn-pieno { width: 100%; }
 .ga-sede .ga-btn-accento { background: var(--ga-accento); color: #fff; }
 .ga-sede .ga-btn-whatsapp { background: var(--ga-whatsapp); color: #fff; }
 .ga-sede .ga-btn-chiaro { background: #fff; color: var(--ga-primario); }
 .ga-sede .ga-btn-bordo { border: 2px solid var(--ga-primario); color: var(--ga-primario); background: transparent; }
-.ga-sede .ga-badge-lista { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: .95rem; }
-.ga-sede .ga-badge-lista li::before { content: "✓ "; font-weight: 700; color: #ffd8b8; }
+
+.ga-sede .ga-numeri { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 24px 0 0; }
+.ga-sede .ga-numero { background: var(--ga-sfondo-tenue); border-radius: var(--ga-raggio); padding: 18px 20px; display: grid; gap: 2px; }
+.ga-sede .ga-numero strong { font-size: 1.5rem; color: var(--ga-primario); line-height: 1.2; }
+.ga-sede .ga-numero span { font-size: .95rem; color: var(--ga-testo-tenue); }
 
 .ga-sede .ga-griglia { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 .ga-sede .ga-card { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 24px; }
 .ga-sede .ga-card .ga-icona { font-size: 2rem; line-height: 1; margin-bottom: 12px; display: block; }
 .ga-sede .ga-card p:last-child { margin-bottom: 0; }
-.ga-sede .ga-tenue { background: var(--ga-sfondo-tenue); border-radius: var(--ga-raggio); }
+
+.ga-sede .ga-urgenza { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; background: var(--ga-accento); color: #fff; border-radius: var(--ga-raggio); padding: 28px 32px; margin: 0 0 48px; }
+.ga-sede .ga-urgenza h2 { color: #fff; font-size: clamp(1.2rem, 2.4vw, 1.5rem); margin-bottom: .3em; }
+.ga-sede .ga-urgenza p { margin: 0; }
+.ga-sede .ga-urgenza .ga-btn-chiaro { color: var(--ga-accento); }
 
 .ga-sede .ga-passi { counter-reset: passo; list-style: none; padding: 0; margin: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .ga-sede .ga-passi li { counter-increment: passo; background: #fff; border-radius: var(--ga-raggio); padding: 24px; border: 1px solid var(--ga-bordo); }
@@ -63,31 +87,38 @@
 
 .ga-sede .ga-zone { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .ga-sede .ga-zone li { background: #fff; border: 1px solid var(--ga-bordo); border-radius: 999px; padding: 6px 14px; font-size: .95rem; }
+.ga-sede .ga-contributi { margin-bottom: 48px; }
+.ga-sede .ga-contributi p:last-child { margin-bottom: 0; }
 
 .ga-sede .ga-contatti { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: start; }
 .ga-sede .ga-contatti dl { margin: 0; }
 .ga-sede .ga-contatti dt { font-weight: 700; margin-top: 14px; }
+.ga-sede .ga-contatti dt:first-child { margin-top: 0; }
 .ga-sede .ga-contatti dd { margin: 2px 0 0; }
 .ga-sede .ga-orari { border-collapse: collapse; width: 100%; font-size: .95rem; }
 .ga-sede .ga-orari td { padding: 4px 0; border-bottom: 1px solid var(--ga-bordo); }
 .ga-sede .ga-orari td:last-child { text-align: right; }
-.ga-sede .ga-mappa { width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: var(--ga-raggio); }
+.ga-sede .ga-mappa { display: block; width: 100%; aspect-ratio: 4 / 3; border: 0; border-radius: var(--ga-raggio); margin-bottom: 12px; background: var(--ga-sfondo-tenue); }
 
 .ga-sede .ga-faq details { background: #fff; border: 1px solid var(--ga-bordo); border-radius: var(--ga-raggio); padding: 16px 20px; margin-bottom: 12px; }
 .ga-sede .ga-faq summary { font-weight: 700; cursor: pointer; }
 .ga-sede .ga-faq details p { margin: 12px 0 0; }
 
-.ga-sede .ga-cta-finale { background: var(--ga-accento); color: #fff; border-radius: var(--ga-raggio); text-align: center; padding: 48px 16px; margin-bottom: 48px; }
+.ga-sede .ga-cta-finale { background: var(--ga-primario); color: #fff; border-radius: var(--ga-raggio); text-align: center; padding: 48px 16px; margin-bottom: 48px; }
 .ga-sede .ga-cta-finale h2, .ga-sede .ga-cta-finale p { color: #fff; }
 .ga-sede .ga-cta-finale .ga-cta-riga { justify-content: center; }
-.ga-sede .ga-cta-finale .ga-btn-accento { background: var(--ga-primario); }
 
 /* Barra contatti fissa su smartphone: chiamata e WhatsApp sempre a portata di pollice */
 .ga-sede .ga-barra-mobile { display: none; }
+@media (max-width: 860px) {
+  .ga-sede .ga-hero { grid-template-columns: 1fr; padding: 32px 20px; }
+}
 @media (max-width: 700px) {
   .ga-sede section { padding: 32px 0; }
+  .ga-sede section.ga-tenue { padding: 28px 20px; }
   .ga-sede .ga-hero { border-radius: 0; margin-left: -16px; margin-right: -16px; }
-  .ga-sede .ga-btn { width: 100%; justify-content: center; }
+  .ga-sede .ga-btn { width: 100%; }
+  .ga-sede .ga-urgenza { padding: 24px 20px; }
   .ga-sede .ga-barra-mobile { display: grid; grid-template-columns: 1fr 1fr; position: fixed; left: 0; right: 0; bottom: 0; z-index: 999; box-shadow: 0 -4px 14px rgba(0,0,0,.15); }
   .ga-sede .ga-barra-mobile a { padding: 14px 8px; text-align: center; font-weight: 700; color: #fff; text-decoration: none; }
   .ga-sede .ga-barra-mobile a:first-child { background: var(--ga-primario); }
@@ -100,38 +131,62 @@
 <div class="ga-sede">
 <div class="ga-wrap">
 
-<header class="ga-hero">
-  <div class="ga-wrap">
-    <h1>Le sedi Gruppo Agila</h1>
-    <p class="ga-sottotitolo">Badanti, colf e babysitter vicino a te: siamo presenti a [DA COMPILARE: Città 1], [DA COMPILARE: Città 2], [DA COMPILARE: Città 3]. Scegli la sede più comoda e contattaci per un primo colloquio senza impegno.</p>
+<header class="ga-hero ga-hero-singolo">
+  <div class="ga-hero-testo">
+    <h1>Le sedi Gruppo Agila in Friuli Venezia Giulia</h1>
+    <p class="ga-sottotitolo">Badanti, colf e babysitter vicino a te: siamo presenti a Udine, Pordenone e Trieste e seguiamo le famiglie delle province di Udine, Pordenone, Trieste e Gorizia. Scegli la sede più comoda e contattaci per una consulenza gratuita.</p>
   </div>
 </header>
+
+<div class="ga-numeri">
+    <div class="ga-numero"><strong>Dal 1987</strong><span>al fianco delle famiglie</span></div>
+    <div class="ga-numero"><strong>Oltre 2.000</strong><span>famiglie aiutate in FVG negli ultimi 10 anni</span></div>
+    <div class="ga-numero"><strong>24–48 ore</strong><span>per una soluzione temporanea nei casi urgenti</span></div>
+    <div class="ga-numero"><strong>Gratuita</strong><span>la prima consulenza</span></div>
+</div>
 
 <section>
   <div class="ga-griglia">
     <div class="ga-card">
-      <h3>Gruppo Agila [DA COMPILARE: Città 1]</h3>
-      <p>[DA COMPILARE: Via e numero civico], [DA COMPILARE: CAP] [DA COMPILARE: Città 1] ([DA COMPILARE: sigla provincia, es. VA])<br>
-      <a href="#contatti" data-evento="chiamata" data-sede="sede-1">[DA COMPILARE: es. +39 0331 000000]</a></p>
-      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/sede-1/">Scopri la sede di [DA COMPILARE: Città 1]</a></p>
+      <h2>Gruppo Agila Udine</h2>
+      <p>Via Diego Simonetti, 1, 33100 Udine (UD)<br>
+      <a href="tel:+390432681739" data-evento="chiamata" data-sede="udine">+39 0432 681739</a><br>
+      Lun–Ven 09:00–13:00 e 14:30–18:30</p>
+      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/udine/">Badanti e colf a Udine</a></p>
     </div>
     <div class="ga-card">
-      <h3>Gruppo Agila [DA COMPILARE: Città 2]</h3>
-      <p>[DA COMPILARE: Via e numero civico], [DA COMPILARE: CAP] [DA COMPILARE: Città 2] ([DA COMPILARE: sigla provincia])<br>
-      <a href="#contatti" data-evento="chiamata" data-sede="sede-2">[DA COMPILARE: telefono]</a></p>
-      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/sede-2/">Scopri la sede di [DA COMPILARE: Città 2]</a></p>
+      <h2>Gruppo Agila Pordenone</h2>
+      <p>Viale Marconi, 54, 33170 Pordenone (PN)<br>
+      <a href="tel:+3904341754524" data-evento="chiamata" data-sede="pordenone">+39 0434 1754524</a><br>
+      Lun–Ven 09:00–13:00 e 14:30–18:30</p>
+      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/pordenone/">Badanti e colf a Pordenone</a></p>
     </div>
     <div class="ga-card">
-      <h3>Gruppo Agila [DA COMPILARE: Città 3]</h3>
-      <p>[DA COMPILARE: Via e numero civico], [DA COMPILARE: CAP] [DA COMPILARE: Città 3] ([DA COMPILARE: sigla provincia])<br>
-      <a href="#contatti" data-evento="chiamata" data-sede="sede-3">[DA COMPILARE: telefono]</a></p>
-      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/sede-3/">Scopri la sede di [DA COMPILARE: Città 3]</a></p>
+      <h2>Gruppo Agila Trieste</h2>
+      <p>Via Antonio Canova, 6, 34129 Trieste (TS)<br>
+      <a href="tel:+390402034844" data-evento="chiamata" data-sede="trieste">+39 040 2034844</a><br>
+      Lun–Ven 09:00–13:00 e 14:30–18:30</p>
+      <p><a class="ga-btn ga-btn-bordo" href="https://www.gruppoagila.it/sedi/trieste/">Badanti e colf a Trieste</a></p>
     </div>
   </div>
 </section>
 
 </div>
 </div>
+<script>
+(function () {
+  if (window.gaSedeTracciamento) return;
+  window.gaSedeTracciamento = true;
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('.ga-sede [data-evento]');
+    if (!a) return;
+    var dati = { tipo_contatto: a.getAttribute('data-evento'), sede: a.getAttribute('data-sede') };
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(Object.assign({ event: 'contatto_sede' }, dati));
+    if (typeof window.gtag === 'function') window.gtag('event', 'contatto_sede', dati);
+  });
+})();
+</script>
 
 </body>
 </html>

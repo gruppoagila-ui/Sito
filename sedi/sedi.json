@@ -4,90 +4,113 @@
     "sito": "https://www.gruppoagila.it",
     "percorso_sedi": "/sedi/",
     "pagina_contatti": "https://www.gruppoagila.it/contatti/",
-    "autorizzazione": "Agenzia per il Lavoro autorizzata dal Ministero del Lavoro (aut. n. [DA COMPILARE: verificare numero, es. 0019245])",
-    "logo": "[DA COMPILARE: URL del logo, es. https://www.gruppoagila.it/wp-content/uploads/logo.png]",
+    "pagina_contributi": "https://www.gruppoagila.it/contributi-regionali/",
+    "email": "info@gruppoagila.it",
+    "autorizzazione": "Agenzia per il Lavoro autorizzata dal Ministero del Lavoro (aut. n. 0019245)",
+    "logo": "",
     "form_shortcode": "",
+    "numeri": [
+      ["Dal 1987", "al fianco delle famiglie"],
+      ["Oltre 2.000", "famiglie aiutate in FVG negli ultimi 10 anni"],
+      ["24–48 ore", "per una soluzione temporanea nei casi urgenti"],
+      ["Gratuita", "la prima consulenza"]
+    ],
     "punti_di_forza": [
-      "Agenzia per il Lavoro autorizzata dal Ministero del Lavoro",
-      "Personale selezionato, con colloquio e verifica delle referenze",
-      "Gestione completa di contratto, buste paga e contributi INPS",
-      "Un referente dedicato nella sede di {citta}"
+      "Agenzia autorizzata dal Ministero del Lavoro (n. 0019245)",
+      "Oltre 30 anni di esperienza",
+      "Prima consulenza gratuita",
+      "Gestione completa di contratto e pratiche"
     ]
   },
   "sedi": [
     {
-      "slug": "sede-1",
-      "citta": "[DA COMPILARE: Città 1]",
-      "provincia": "[DA COMPILARE: sigla provincia, es. VA]",
-      "indirizzo": "[DA COMPILARE: Via e numero civico]",
-      "cap": "[DA COMPILARE: CAP]",
-      "telefono": "[DA COMPILARE: es. +39 0331 000000]",
-      "whatsapp": "[DA COMPILARE: es. +39 333 0000000]",
-      "email": "[DA COMPILARE: es. citta1@gruppoagila.it]",
-      "referente": "[DA COMPILARE: Nome e cognome del referente, oppure lasciare vuoto]",
+      "slug": "udine",
+      "citta": "Udine",
+      "provincia": "UD",
+      "indirizzo": "Via Diego Simonetti, 1",
+      "cap": "33100",
+      "telefono": "+39 0432 681739",
+      "whatsapp": "+39 0432 681739",
+      "email": "info@gruppoagila.it",
+      "referente": "",
       "orari": [
         {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "09:00", "chiude": "13:00"},
-        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"}
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"},
+        {"giorni": ["Sa"], "apre": "09:00", "chiude": "13:00", "nota": "su appuntamento"}
       ],
       "lat": "",
       "lng": "",
-      "google_business_url": "[DA COMPILARE: link alla scheda Google Business della sede, per recensioni e indicazioni]",
-      "intro": "[DA COMPILARE: 2-3 frasi uniche su questa sede. Es: da quanti anni siete presenti in città, quante famiglie avete aiutato, cosa distingue questa sede. Testo diverso per ogni sede = migliore posizionamento su Google.]",
-      "come_raggiungerci": "[DA COMPILARE: es. a 5 minuti dalla stazione, parcheggio gratuito di fronte, fermata autobus linea X]",
+      "google_business_url": "",
+      "intro": [
+        "La sede di Udine, in Via Diego Simonetti 1 all'angolo con Via Fiume, è la sede storica di Gruppo Agila: è da qui che dal 1987 aiutiamo le famiglie friulane a trovare badanti, colf e babysitter di fiducia.",
+        "Seguiamo le famiglie di Udine e di tutta la provincia, dall'hinterland alla Bassa Friulana, dal Cividalese al Gemonese fino alla Carnia. Incontriamo i familiari, valutiamo insieme le necessità della persona da assistere e proponiamo solo candidati selezionati e referenziati."
+      ],
+      "come_raggiungerci": "Via Diego Simonetti 1, all'angolo con Via Fiume.",
       "zone_servite": [
-        "[DA COMPILARE: Comune vicino 1]",
-        "[DA COMPILARE: Comune vicino 2]",
-        "[DA COMPILARE: Comune vicino 3]"
+        "Tavagnacco", "Pasian di Prato", "Campoformido", "Martignacco", "Pradamano",
+        "Remanzacco", "Pozzuolo del Friuli", "Tricesimo", "Feletto Umberto", "Cividale del Friuli",
+        "Codroipo", "San Daniele del Friuli", "Gemona del Friuli", "Tolmezzo", "Palmanova",
+        "Cervignano del Friuli", "Latisana", "Gorizia", "Cormons"
       ]
     },
     {
-      "slug": "sede-2",
-      "citta": "[DA COMPILARE: Città 2]",
-      "provincia": "[DA COMPILARE: sigla provincia]",
-      "indirizzo": "[DA COMPILARE: Via e numero civico]",
-      "cap": "[DA COMPILARE: CAP]",
-      "telefono": "[DA COMPILARE: telefono]",
-      "whatsapp": "[DA COMPILARE: numero WhatsApp]",
-      "email": "[DA COMPILARE: email della sede]",
-      "referente": "[DA COMPILARE: Nome e cognome del referente, oppure lasciare vuoto]",
+      "slug": "pordenone",
+      "citta": "Pordenone",
+      "provincia": "PN",
+      "indirizzo": "Viale Marconi, 54",
+      "cap": "33170",
+      "telefono": "+39 0434 1754524",
+      "whatsapp": "+39 0432 681739",
+      "email": "info@gruppoagila.it",
+      "referente": "",
       "orari": [
         {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "09:00", "chiude": "13:00"},
-        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"}
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"},
+        {"giorni": ["Sa"], "apre": "09:00", "chiude": "13:00", "nota": "su appuntamento"}
       ],
       "lat": "",
       "lng": "",
-      "google_business_url": "[DA COMPILARE: link alla scheda Google Business della sede]",
-      "intro": "[DA COMPILARE: 2-3 frasi uniche su questa sede.]",
-      "come_raggiungerci": "[DA COMPILARE: indicazioni per raggiungere la sede]",
+      "google_business_url": "",
+      "intro": [
+        "In Viale Marconi 54 c'è la sede di Gruppo Agila per Pordenone e la Destra Tagliamento: un punto di riferimento vicino a casa per le famiglie che cercano una badante, una colf o una babysitter.",
+        "Seguiamo le famiglie di Pordenone e della provincia, da Sacile a Spilimbergo, da Maniago a San Vito al Tagliamento, con l'esperienza di oltre 30 anni di Gruppo Agila nella selezione del personale domestico e nella gestione delle pratiche di assunzione."
+      ],
+      "come_raggiungerci": "",
       "zone_servite": [
-        "[DA COMPILARE: Comune vicino 1]",
-        "[DA COMPILARE: Comune vicino 2]",
-        "[DA COMPILARE: Comune vicino 3]"
+        "Porcia", "Cordenons", "Roveredo in Piano", "Fontanafredda", "Sacile",
+        "Fiume Veneto", "Azzano Decimo", "Pasiano di Pordenone", "Prata di Pordenone", "Zoppola",
+        "San Quirino", "Aviano", "Maniago", "Spilimbergo", "San Vito al Tagliamento",
+        "Casarsa della Delizia"
       ]
     },
     {
-      "slug": "sede-3",
-      "citta": "[DA COMPILARE: Città 3]",
-      "provincia": "[DA COMPILARE: sigla provincia]",
-      "indirizzo": "[DA COMPILARE: Via e numero civico]",
-      "cap": "[DA COMPILARE: CAP]",
-      "telefono": "[DA COMPILARE: telefono]",
-      "whatsapp": "[DA COMPILARE: numero WhatsApp]",
-      "email": "[DA COMPILARE: email della sede]",
-      "referente": "[DA COMPILARE: Nome e cognome del referente, oppure lasciare vuoto]",
+      "slug": "trieste",
+      "citta": "Trieste",
+      "provincia": "TS",
+      "indirizzo": "Via Antonio Canova, 6",
+      "cap": "34129",
+      "telefono": "+39 040 2034844",
+      "whatsapp": "+39 0432 681739",
+      "email": "info@gruppoagila.it",
+      "referente": "",
       "orari": [
         {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "09:00", "chiude": "13:00"},
-        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"}
+        {"giorni": ["Mo", "Tu", "We", "Th", "Fr"], "apre": "14:30", "chiude": "18:30"},
+        {"giorni": ["Sa"], "apre": "09:00", "chiude": "13:00", "nota": "su appuntamento"}
       ],
       "lat": "",
       "lng": "",
-      "google_business_url": "[DA COMPILARE: link alla scheda Google Business della sede]",
-      "intro": "[DA COMPILARE: 2-3 frasi uniche su questa sede.]",
-      "come_raggiungerci": "[DA COMPILARE: indicazioni per raggiungere la sede]",
+      "google_business_url": "",
+      "intro": [
+        "La sede di Trieste si trova in Via Antonio Canova 6 e segue le famiglie di tutti i rioni della città, da Barcola a Servola, da Opicina a San Giacomo, oltre ai comuni della provincia e del Monfalconese.",
+        "Molte famiglie triestine ci contattano per una badante convivente H24 che permetta a un genitore anziano di restare a casa propria: ti aiutiamo a trovare la persona giusta e a gestire contratto e pratiche, con la serietà di un'agenzia attiva dal 1987."
+      ],
+      "come_raggiungerci": "",
       "zone_servite": [
-        "[DA COMPILARE: Comune vicino 1]",
-        "[DA COMPILARE: Comune vicino 2]",
-        "[DA COMPILARE: Comune vicino 3]"
+        "Barcola", "Roiano", "San Giovanni", "San Giacomo", "Servola",
+        "Valmaura", "Opicina", "Borgo Teresiano", "Muggia", "Duino Aurisina",
+        "San Dorligo della Valle", "Sgonico", "Monrupino", "Monfalcone", "Ronchi dei Legionari",
+        "Grado"
       ]
     }
   ]

@@ -1,30 +1,35 @@
-# Impostazioni SEO (Yoast / Rank Math)
+# Impostazioni SEO (Yoast / Rank Math) e Google Ads
 
-Pagina madre: **Le nostre sedi** — slug `sedi`
+## Le nostre sedi
 
-## Le nostre sedi | Gruppo Agila - Badanti, Colf e Babysitter
-
+- URL: https://www.gruppoagila.it/sedi/
 - Slug WordPress: `sedi`
-- Titolo SEO: Le nostre sedi | Gruppo Agila - Badanti, Colf e Babysitter
-- Meta description: Le sedi Gruppo Agila a [DA COMPILARE: Città 1], [DA COMPILARE: Città 2], [DA COMPILARE: Città 3]: badanti, colf e babysitter selezionati vicino a te. Contatta la sede più comoda.
+- Titolo SEO: Le nostre sedi in FVG: Udine, Pordenone, Trieste | Gruppo Agila
+- Meta description: Le sedi Gruppo Agila a Udine, Pordenone, Trieste: badanti, colf e babysitter selezionati vicino a te. Consulenza gratuita.
 
-## Badanti, Colf e Babysitter a [DA COMPILARE: Città 1] | Gruppo Agila
+## Udine
 
-- Slug WordPress: `sede-1` (pagina figlia di *Le nostre sedi*)
-- Titolo SEO: Badanti, Colf e Babysitter a [DA COMPILARE: Città 1] | Gruppo Agila
-- Meta description: Cerchi una badante, una colf o una babysitter a [DA COMPILARE: Città 1]? Gruppo Agila seleziona personale referenziato e gestisce contratto e buste paga. Chiamaci o scrivici su WhatsApp.
-- Parola chiave principale: badanti [DA COMPILARE: Città 1]
+- URL: https://www.gruppoagila.it/sedi/udine/
+- Slug WordPress: `udine` (pagina figlia di *Le nostre sedi*)
+- Titolo SEO: Agenzia Badanti Udine – Colf e Babysitter | Gruppo Agila
+- Meta description: Cerchi una badante, una colf o una babysitter a Udine? Gruppo Agila, agenzia autorizzata dal 1987: personale selezionato e pratiche gestite. Consulenza gratuita.
+- Parola chiave principale: agenzia badanti udine
+- Parole chiave correlate: badante udine, badante convivente udine, colf udine, babysitter udine
 
-## Badanti, Colf e Babysitter a [DA COMPILARE: Città 2] | Gruppo Agila
+## Pordenone
 
-- Slug WordPress: `sede-2` (pagina figlia di *Le nostre sedi*)
-- Titolo SEO: Badanti, Colf e Babysitter a [DA COMPILARE: Città 2] | Gruppo Agila
-- Meta description: Cerchi una badante, una colf o una babysitter a [DA COMPILARE: Città 2]? Gruppo Agila seleziona personale referenziato e gestisce contratto e buste paga. Chiamaci o scrivici su WhatsApp.
-- Parola chiave principale: badanti [DA COMPILARE: Città 2]
+- URL: https://www.gruppoagila.it/sedi/pordenone/
+- Slug WordPress: `pordenone` (pagina figlia di *Le nostre sedi*)
+- Titolo SEO: Agenzia Badanti Pordenone – Colf e Babysitter | Gruppo Agila
+- Meta description: Cerchi una badante, una colf o una babysitter a Pordenone? Gruppo Agila, agenzia autorizzata dal 1987: personale selezionato e pratiche gestite. Consulenza gratuita.
+- Parola chiave principale: agenzia badanti pordenone
+- Parole chiave correlate: badante pordenone, badante convivente pordenone, colf pordenone, babysitter pordenone
 
-## Badanti, Colf e Babysitter a [DA COMPILARE: Città 3] | Gruppo Agila
+## Trieste
 
-- Slug WordPress: `sede-3` (pagina figlia di *Le nostre sedi*)
-- Titolo SEO: Badanti, Colf e Babysitter a [DA COMPILARE: Città 3] | Gruppo Agila
-- Meta description: Cerchi una badante, una colf o una babysitter a [DA COMPILARE: Città 3]? Gruppo Agila seleziona personale referenziato e gestisce contratto e buste paga. Chiamaci o scrivici su WhatsApp.
-- Parola chiave principale: badanti [DA COMPILARE: Città 3]
+- URL: https://www.gruppoagila.it/sedi/trieste/
+- Slug WordPress: `trieste` (pagina figlia di *Le nostre sedi*)
+- Titolo SEO: Agenzia Badanti Trieste – Colf e Babysitter | Gruppo Agila
+- Meta description: Cerchi una badante, una colf o una babysitter a Trieste? Gruppo Agila, agenzia autorizzata dal 1987: personale selezionato e pratiche gestite. Consulenza gratuita.
+- Parola chiave principale: agenzia badanti trieste
+- Parole chiave correlate: badante trieste, badante convivente trieste, colf trieste, babysitter trieste

@@ -1,58 +1,80 @@
 # Sito Gruppo Agila – Pagine delle sedi
 
-Pagine locali per le 3 sedi di **Gruppo Agila** (badanti, colf, babysitter, gestione contratti),
-pensate per WordPress e ottimizzate per portare contatti: chiamate, WhatsApp e richieste di colloquio.
+Pagine locali per le 3 sedi di **Gruppo Agila** (Udine, Pordenone, Trieste), pensate per
+WordPress. Servono come pagine di destinazione delle campagne **Google Ads** e sono ottimizzate
+per la **SEO locale**.
+
+| Pagina | URL | Telefono |
+|---|---|---|
+| Le nostre sedi | https://www.gruppoagila.it/sedi/ | – |
+| Udine | https://www.gruppoagila.it/sedi/udine/ | 0432 681739 |
+| Pordenone | https://www.gruppoagila.it/sedi/pordenone/ | 0434 1754524 |
+| Trieste | https://www.gruppoagila.it/sedi/trieste/ | 040 2034844 |
 
 ## Cosa contiene
 
 | File | A cosa serve |
 |---|---|
-| `sedi/sedi.json` | **Unico file da compilare**: indirizzi, telefoni, orari, zone servite, testi di ogni sede |
-| `sedi/genera.py` | Rigenera tutte le pagine da `sedi.json` |
+| `sedi/sedi.json` | Dati e testi di ogni sede: indirizzi, telefoni, orari, zone servite |
+| `sedi/genera.py` | Rigenera tutte le pagine da `sedi.json` (`python3 sedi/genera.py`) |
 | `sedi/stile.css` | Grafica delle pagine (colori modificabili in cima al file) |
-| `sedi/output/wordpress/` | Codice da incollare in WordPress (1 file per pagina) |
+| `sedi/output/wordpress/` | **Codice da incollare in WordPress** (1 file per pagina) |
 | `sedi/output/anteprima/` | Le stesse pagine da aprire nel browser per un controllo |
-| `sedi/output/seo.md` | Slug, titolo SEO e meta description per Yoast / Rank Math |
+| `sedi/output/seo.md` | Slug, titolo SEO, meta description e parole chiave |
 
-Ogni pagina sede contiene: titolo locale ("Badanti, Colf e Babysitter a *Città*"), pulsanti
-Chiama / WhatsApp / Colloquio gratuito, servizi, come funziona, zone servite, contatti con orari
-e mappa Google, domande frequenti, link alle altre sedi e una barra contatti fissa su smartphone.
-In fondo c'è il codice di dati strutturati (schema.org `EmploymentAgency`, `BreadcrumbList`,
-`FAQPage`) che aiuta Google a mostrare la sede nelle ricerche locali.
+## Struttura di ogni pagina sede
 
-## 1. Compilare i dati
+1. **Intestazione**: titolo con la parola chiave ("Agenzia Badanti, Colf e Babysitter a *Città*"),
+   punti di forza e riquadro **Consulenza gratuita** con chiamata, WhatsApp ed email, visibile
+   senza scorrere la pagina.
+2. Numeri chiave (dal 1987, oltre 2.000 famiglie, 24–48 ore nei casi urgenti, consulenza gratuita).
+3. Testo unico sulla sede, servizi, box **urgenze** (dimissione ospedaliera), come funziona.
+4. **Zone servite**: comuni e quartieri vicini, per comparire nelle ricerche "badante + paese".
+5. Contributi regionali FVG, contatti con orari e mappa, 6 domande frequenti, link alle altre sedi.
+6. Su smartphone: barra fissa in basso con **Chiama** e **WhatsApp**.
+7. Dati strutturati schema.org (`EmploymentAgency`, `BreadcrumbList`, `FAQPage`) per Google.
 
-Aprire `sedi/sedi.json` e sostituire ogni testo `[DA COMPILARE: ...]`. Consigli:
+## Pubblicare su WordPress
 
-- `slug`: il nome della pagina nell'indirizzo, es. `varese` → `gruppoagila.it/sedi/varese/`.
-- `intro`: scrivere un testo **diverso per ogni sede** (Google penalizza pagine quasi identiche).
-- `zone_servite`: elencare i comuni vicini: le persone cercano "badante + nome del paese".
-- Indirizzo e telefono devono essere **identici** a quelli della scheda Google Business della sede.
-- `form_shortcode` (facoltativo): incollare lo shortcode del modulo contatti, es.
-  `[contact-form-7 id="123" title="Contatti"]`. Se vuoto, il pulsante porta a `pagina_contatti`.
+1. **Pagine → Aggiungi nuova**, titolo *Le nostre sedi*, slug `sedi`. Aggiungere un blocco
+   **HTML personalizzato** e incollare `sedi/output/wordpress/le-nostre-sedi.html`. Pubblicare.
+2. Per ogni sede: nuova pagina, **Genitore = Le nostre sedi**, slug `udine` / `pordenone` /
+   `trieste`, blocco **HTML personalizzato** con il file corrispondente.
+3. In Yoast / Rank Math copiare titolo SEO e meta description da `sedi/output/seo.md`.
+4. Se il tema lo consente, scegliere un modello di pagina **a larghezza piena**.
+5. Aggiungere *Le nostre sedi* al menu e al footer, e collegare le pagine già esistenti
+   (`/badanti-udine/`, `/badanti-pordenone-servizi/`…) alla pagina della sede corrispondente.
 
-Poi rigenerare le pagine:
+## Google Ads
 
-```bash
-python3 sedi/genera.py
-```
+- **Una campagna (o un gruppo di annunci) per sede**, con URL finale alla pagina della sede e
+  targeting geografico sul raggio servito da quella sede.
+- Parole chiave suggerite per ogni città in `seo.md` (es. *agenzia badanti udine*,
+  *badante convivente trieste*, *colf pordenone*).
+- Estensioni: **località** (collegando il profilo Google Business), **chiamata** con il numero
+  della sede e sitelink verso le altre pagine sede.
 
-Lo script elenca i campi ancora da compilare.
+### Misurare le conversioni
 
-## 2. Pubblicare su WordPress
+Ogni clic su telefono, WhatsApp, email, indicazioni e richiesta di contatto invia l'evento
+`contatto_sede` con due parametri:
 
-1. **Pagine → Aggiungi nuova**, titolo *Le nostre sedi*, slug `sedi`.
-   Aggiungere un blocco **HTML personalizzato** e incollare il contenuto di
-   `sedi/output/wordpress/le-nostre-sedi.html`. Pubblicare.
-2. Per ogni sede: nuova pagina, impostare **Genitore = Le nostre sedi** e lo slug indicato in
-   `seo.md`, blocco **HTML personalizzato**, incollare il file `sedi/output/wordpress/<slug>.html`.
-3. In Yoast / Rank Math copiare titolo SEO e meta description da `seo.md`.
-4. Aggiungere *Le nostre sedi* al menu principale e al footer.
-5. Nella scheda Google Business di ogni sede inserire come sito web il link alla pagina della sede.
+- `tipo_contatto`: `chiamata`, `chiamata_urgente`, `whatsapp`, `email`, `indicazioni`, `richiesta_contatto`
+- `sede`: `udine`, `pordenone`, `trieste`
 
-## Misurare i contatti
+L'evento arriva sia a **Google Tag Manager** (`dataLayer`) sia a **gtag.js**, se presente.
 
-Tutti i pulsanti hanno gli attributi `data-evento` (`chiamata`, `whatsapp`, `email`,
-`richiesta_preventivo`) e `data-sede`. In Google Tag Manager si può creare un attivatore
-"Clic – Tutti gli elementi" su questi attributi per contare in GA4 quanti contatti arrivano
-da ciascuna sede.
+- **Con gtag.js / Site Kit**: in GA4 segnare `contatto_sede` come *evento chiave* e importarlo
+  in Google Ads come conversione.
+- **Con Tag Manager**: creare un attivatore *Evento personalizzato* `contatto_sede` e un tag
+  GA4 o Google Ads collegato. In questo caso non creare anche la conversione da gtag, per non
+  contare due volte lo stesso contatto.
+
+## Dati da verificare
+
+- Il **WhatsApp** è il numero di Udine (0432 681739) su tutte le sedi, come indicato sul sito.
+- **Sabato** 9–13 "su appuntamento": sul sito alcune pagine lo indicano senza appuntamento.
+- Il **modulo contatti**: se esiste uno shortcode (Contact Form 7, WPForms…), inserirlo in
+  `form_shortcode` di `sedi.json` e rigenerare: comparirà nel riquadro in alto.
+- Aggiungere in `sedi.json` il link alla scheda **Google Business** di ogni sede
+  (`google_business_url`) e il logo (`logo`).
